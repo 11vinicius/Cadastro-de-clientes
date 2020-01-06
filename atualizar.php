@@ -12,8 +12,8 @@
         foreach($clientes as $dados):
 ?>
 
-<div class="container">
-    <h1><b>Atualizar clientes</b></h1>
+<div class="container my-3">
+    <h1 ><b>Atualizar Dados</b></h1>
     
     <form method="POST" id="atualizar">
     <input type="hidden"  name="id" value="<?php echo $_GET['id'];?>">

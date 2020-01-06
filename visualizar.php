@@ -11,7 +11,7 @@
     if(!empty( $clientes )):
         foreach( $clientes  as $item):
 ?>
-    <div class="container">
+    <div class="container my-3">
         <h1><b>Dados de cliente</b></h1>
 
         <p><h3><b>Nome : </b> <?php echo $item['nome'];?> .</h3></p>

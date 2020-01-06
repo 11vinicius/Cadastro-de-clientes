@@ -7,10 +7,12 @@
         
 ?>
 
-<div class="container">
-    <h1><b>Cadastro clientes</b></h1>
+<div class="container my-3">
+
+    <h1 ><b>Cadastro Clientes</b></h1>
     <p id="erro"></p>
-    <form method="POST" id="cadastro">
+
+    <form method="POST"  id="cadastro">
         <div class="form-group">
             <label for="nome"><h4>Nome</h4></label><br/>
             <input type="text" name="nome" id="nome" class="form-control" autocomplete="off" maxlength="100" minlength="8" required>
