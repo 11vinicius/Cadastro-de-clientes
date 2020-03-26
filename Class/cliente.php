@@ -9,7 +9,6 @@ Class cliente{
         $this->pdo = $pdo;
     }
 
-    /////////////////Visualização////////////////////////
     public function exibe($inicio,$fim)
     {
         $dados = "";
@@ -32,9 +31,7 @@ Class cliente{
         }
         return $dados;
     }
-    //////////////////////FIM//////////////////////////////////////
 
-    ////////////////////Adiciona novos clientes////////////////////
     public function adiciona($nome,$email,$telefone,$estado,$cidade)
     {
         $sql = $this->pdo->prepare("select * from cliente where email=:email");
@@ -56,9 +53,7 @@ Class cliente{
               return false;
           }
         }
-     //////////////////////FIM////////////////////////////////////////
 
-    /////////////////////////EXCLUIR//////////////////////////////////
     public function exclui($id)
     {
         $sql = $this->pdo->prepare('delete from cliente where id = :id');
@@ -67,9 +62,7 @@ Class cliente{
 
         return true;
     }
-    //////////////////////FIM////////////////////////////////////////
 
-    //////////////////////////ATUALIZA DADOS/////////////////////////
     public function update($nome ,$email ,$telefone ,$estado ,$cidade ,$id)
     {
         $sql = $this->pdo->prepare("update cliente set nome = :nome ,email = :email ,telefone = :telefone ,estado = :estado ,cidade = :cidade where id =:id");
@@ -82,9 +75,7 @@ Class cliente{
         $sql->execute();
         return true;
     }
-    ///////////////////////FIM////////////////////////////////////////
 
-    /////////////////////PAGINAÇÃO///////////////////////////////////
     public function paginacao()
     {
         $sql = $this->pdo->prepare("select count(*) as c from cliente");
@@ -96,7 +87,3 @@ Class cliente{
     }
 }
 
-/*require_once '../config.php';
-$c = new cliente($pdo);
-$lista = $c->paginacao();
-var_dump($lista);*/

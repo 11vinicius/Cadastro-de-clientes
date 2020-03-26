@@ -43,7 +43,3 @@ Class uf{
         return $dados;
     }
 }
-/*require_once '../config.php';
-$uf = new uf($pdo);
-$lista = $uf->cidades();
-var_dump($lista);*/
